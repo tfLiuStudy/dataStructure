@@ -1,10 +1,10 @@
-package com.array.sparseArray;
+package com.array;
 
 /**
  * 二维数组和稀疏数组相互转化学习
  * @Auther tfliu
  */
-public class SparseArray {
+public class ArrayTransform {
     /**
      * 二维数组和稀疏数组之间的相互转化
      * @param args

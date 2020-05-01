@@ -1,4 +1,4 @@
-package com.queue.achieve;
+package com.queue.arrAchIeve;
 
 /**
  * 使用数组形式实现环形队列
