@@ -1,4 +1,4 @@
-package com.queue.linkAchieve;
+package com.queue.linkAchieve.singleLink;
 
 /**
  * 存储水浒英雄的节点信息
@@ -39,7 +39,6 @@ public class HeroNode {
                 "no=" + no +
                 ", name='" + name + '\'' +
                 ", nickName='" + nickName + '\'' +
-                ", nextNode=" + nextNode +
                 '}';
     }
 }
