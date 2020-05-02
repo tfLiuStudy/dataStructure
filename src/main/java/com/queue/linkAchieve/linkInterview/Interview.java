@@ -1,12 +1,14 @@
 package com.queue.linkAchieve.linkInterview;
 
 import com.queue.linkAchieve.singleLink.HeroNode;
-import com.sun.org.apache.regexp.internal.RE;
+import org.junit.Test;
+
+import java.util.Stack;
 
 /**
  * 单链表常见面试题总结
  */
-public class Demo01 {
+public class Interview {
 
     /**
      * 单链表的有效节点个数
@@ -69,10 +71,65 @@ public class Demo01 {
 
     /**
      * 单链表反转
+     * 思路：遍历，头插
      * @param node
      * @return
      */
     public HeroNode getInvertLink(HeroNode node){
-        return null;
+        // 判断是否需要反转
+        if(node == null || node.nextNode == null){
+            System.out.println("无需反转");
+            return null;
+        }
+        // 头插反转
+        HeroNode cur = node; // 头节点
+        HeroNode revHead= new HeroNode(0,"", ""); // 反转的头节点
+        HeroNode next = null; // 指向当前节点的下一个节点
+        while (cur != null){
+            next = cur.nextNode;
+            cur.nextNode = revHead.nextNode;
+            revHead.nextNode = cur;
+            cur = next;
+        }
+        return revHead;
+    }
+
+    /**
+     * 打印单链表
+     * 思路分析：
+     * 1、反转打印  参考getInvertLink
+     * 2、利用"栈"，先进后出的原则
+     */
+    public void printReverseLink(HeroNode head){
+        if (head.nextNode == null){
+            System.out.println("空链");
+            return;
+        }
+        Stack<HeroNode> stack = new Stack<HeroNode>();
+        HeroNode temp = head;
+        while (true){
+            if(temp == null){
+                break;
+            }
+            stack.push(temp);
+            temp = temp.nextNode;
+        }
+        // 出栈
+        while (stack.size()>0){
+            System.out.println(stack.pop());
+        }
+    }
+
+    /**
+     * 先进后出
+     */
+    @Test
+    public void testStack(){
+        Stack<HeroNode> stack = new Stack<HeroNode>();
+        HeroNode node1 = new HeroNode(1, "a", "aa");
+        HeroNode node2 = new HeroNode(2, "b", "bb");
+        stack.add(node1);
+        stack.add(node2);
+        System.out.println(stack.pop());
     }
 }

@@ -33,6 +33,12 @@ public class HeroNode {
         this.nickName = nickName;
     }
 
+    /**
+     * 无参构造
+     */
+    public HeroNode() {
+    }
+
     @Override
     public String toString() {
         return "HeroNode{" +

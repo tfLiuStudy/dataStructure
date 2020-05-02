@@ -86,7 +86,6 @@ public class HeroUtilsBySingleLink {
             }
             temp = temp.nextNode;
         }
-
         if (is_update){
             temp.name = node.name;
             temp.nickName = node.nickName;
