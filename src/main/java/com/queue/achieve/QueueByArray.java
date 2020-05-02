@@ -1,4 +1,4 @@
-package com.queue.arrAchIeve;
+package com.queue.achieve;
 
 /**
  * 使用数组的形式实现队列

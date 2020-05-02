@@ -1,4 +1,4 @@
-package com.queue.arrAchIeve;
+package com.queue.achieve;
 
 public class ResultTest {
     public static void main(String[] args) {
