@@ -16,7 +16,7 @@ public class HeroUtilsBySingleLink {
     /**
      * 初始化头节点信息
      */
-    private HeroNode headNode = new HeroNode(0,null, null);
+    public HeroNode headNode = new HeroNode(0,null, null);
 
     /**
      * 直接添加在底部
